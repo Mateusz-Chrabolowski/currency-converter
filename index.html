@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator walut</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="background.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="currency-converter">
+
+        <h1 class="currency-converter__title">Kalkulator walut</h1>
+
+        <form class="currency-converter__form">
+
+            <label class="currency-converter__label">
+                Kwota w zł:
+                <input type="number" id="amount-input" class="currency-converter__input" min="1" required>
+            </label>
+
+            <label class="currency-converter__label">
+                Wybierz walutę:
+                <select id="currency-select" class="currency-converter__select">
+                    <option value="EUR">Euro (EUR)</option>
+                    <option value="CHF">Frank szwajcarski (CHF)</option>
+                    <option value="GBP">Funt brytyjski (GBP)</option>
+                    <option value="SEK">Korona szwedzka (SEK)</option>
+                </select>
+            </label>
+
+            <label class="currency-converter__label">
+                Aktualny kurs:
+                <input type="number" id="rate-input" class="currency-converter__input" readonly>
+            </label>
+
+            <button type="button" id="submit-button" class="currency-converter__button">
+                Przelicz
+            </button>
+
+        </form>
+
+        <p id="result-output" class="currency-converter__result">Kwota po przeliczeniu to …</p>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
